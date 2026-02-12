@@ -1,0 +1,14 @@
+//CREAR OTRO ADMINISTRADOR
+php artisan tinker
+
+// Buscamos tu usuario
+$user = App\Models\User::where('email', 'cjzb20011210@gmail.com')->first();
+
+// Le cambiamos el rol
+$user->role = 'admin';
+
+// Guardamos
+$user->save();
+
+// Salimos
+exit
